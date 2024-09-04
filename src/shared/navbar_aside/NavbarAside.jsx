@@ -1,5 +1,7 @@
 function NavbarAside() {
-  return <div>NavbarAside</div>;
+  return (
+    <div className="bg-primary border-r border-secondary">NavbarAside</div>
+  );
 }
 
 export default NavbarAside;
