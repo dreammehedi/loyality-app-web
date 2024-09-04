@@ -9,7 +9,13 @@ export default {
     fontFamily: {
       "public-sans": ["Public Sans", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#FFFFFF",
+        secondary: "#F2F2F2",
+        "text-color": "#005CE8",
+      },
+    },
   },
   plugins: [],
 };

@@ -4,3 +4,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* tailwind layer */
+@layer components {
+  .my-transition {
+    @apply transition-all duration-300 ease-linear;
+  }
+}
