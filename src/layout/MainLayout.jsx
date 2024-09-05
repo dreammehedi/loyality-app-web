@@ -9,7 +9,7 @@ function MainLayout() {
     // main layout
     <main className="container grid lg:grid-cols-12">
       {/* navbar aside */}
-      <div className="lg:col-span-3">
+      <div className="lg:col-span-3 h-screen">
         <NavbarAside></NavbarAside>
       </div>
 
