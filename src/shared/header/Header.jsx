@@ -1,3 +1,4 @@
+import { FaBarsStaggered } from "react-icons/fa6";
 import { IoSearch } from "react-icons/io5";
 import { MdOutlineNotificationAdd } from "react-icons/md";
 import { RxDashboard } from "react-icons/rx";
@@ -7,7 +8,12 @@ function Header() {
   return (
     // header
     <>
-      <header className="bg-primary py-4 px-4 md:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <header className="bg-primary py-4 px-4 md:px-6 lg:px-8 flex flex-row justify-between items-center gap-4">
+        {/* hamberger menu */}
+        <button className="text-xl">
+          <FaBarsStaggered></FaBarsStaggered>
+        </button>
+
         {/* search field */}
         <form className="relative">
           <IoSearch className="absolute top-1/2 -translate-y-1/2 left-3 text-lg"></IoSearch>
@@ -33,7 +39,7 @@ function Header() {
             <select
               name="language"
               id="language"
-              className="bg-[#F8F9F9] rounded-md px-3 py-2 pl-[40px] outline-none"
+              className="hidden md:inline-block bg-[#F8F9F9] rounded-md px-3 py-2 pl-[40px] outline-none"
             >
               <option value="english">English</option>
               <option value="hindi">Hindi</option>{" "}
