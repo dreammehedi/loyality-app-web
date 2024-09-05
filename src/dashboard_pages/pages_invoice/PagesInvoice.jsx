@@ -74,92 +74,101 @@ function PagesInvoice() {
           Invoice
         </span>
 
-        {/* invoice table */}
-        <table className="w-full h-fit text-[#4A5154] font-medium text-xs text-left">
-          {/* thead */}
-          <thead className="uppercase bg-[#F5F6F7] ">
-            <tr className="*:py-3">
-              <th></th>
-              <th>No.</th>
-              <th>Invoice Subject</th>
-              <th>Client</th>
-              <th>Vat No.</th>
-              <th>Date</th>
-              <th>Status</th>
-              <th>Price</th>
-              <th>Action</th>
-              <th></th>
-            </tr>
-          </thead>
+        <div className="flex flex-col">
+          <div className="overflow-x-auto">
+            <div className="min-w-full inline-block align-middle">
+              <div className="overflow-hidden">
+                <table className="w-full min-w-full text-left table-auto text-xs">
+                  <thead className="uppercase bg-[#F5F6F7] ">
+                    <tr className="*:py-3">
+                      <th scope="col"></th>
+                      <th scope="col">No.</th>
+                      <th scope="col">Invoice Subject</th>
+                      <th scope="col">Client</th>
+                      <th scope="col">Vat No.</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">Action</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {invoicesData?.map((invoice, ind) => {
+                      const {
+                        id,
+                        invoice_subject,
+                        client,
+                        status,
+                        date,
+                        price,
+                        actions,
+                      } = invoice;
+                      return (
+                        <tr
+                          key={ind}
+                          className="*:py-[40px] border-b border-[#E5E7E8] *:whitespace-nowrap *:m-1"
+                        >
+                          <td>
+                            <input type="checkbox" />
+                          </td>
+                          <td>{id}</td>
+                          <td className="text-dark font-semibold">
+                            {invoice_subject}
+                          </td>
+                          <td>
+                            <div className="flex items-center gap-1">
+                              <img
+                                className="w-[30px] h-[20px] object-cover"
+                                src={flagIcon}
+                                alt="flagIcon"
+                              />
+                              <span>{client.name}</span>
+                            </div>
+                          </td>
+                          <td>{client.vat_no}</td>
+                          <td>{date} </td>
+                          <td>
+                            <button
+                              style={{ backgroundColor: status.color }}
+                              className="size-2 rounded-full mr-1"
+                            ></button>
+                            {status.label}
+                          </td>
+                          <td>{price}</td>
+                          <td>
+                            {actions.download ? (
+                              <div className="flex items-center justify-between">
+                                <button className="bg-[#F0F6FF] rounded-full flex justify-center items-center gap-2 px-6 py-2 text-text-color font-semibold text-sm my-transition hover:bg-text-color hover:text-white">
+                                  <FiDownload></FiDownload> Download
+                                </button>
+                                <button className="bg-[#F5F6F7] p-2 rounded-full size-10 flex justify-center items-center my-transition hover:bg-text-color hover:text-white">
+                                  <BsThreeDotsVertical className="text-lg"></BsThreeDotsVertical>
+                                </button>
+                              </div>
+                            ) : (
+                              <button className="bg-[#F5F6F7] p-2 rounded-full size-10 flex justify-center items-center my-transition hover:bg-text-color hover:text-white">
+                                <BsThreeDotsVertical className="text-lg"></BsThreeDotsVertical>
+                              </button>
+                            )}
+                          </td>
+                          <td></td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
 
-          {/* tbody */}
-          <tbody className="bg-primary w-full">
-            {invoicesData?.map((invoice, ind) => {
-              const {
-                id,
-                invoice_subject,
-                client,
-                status,
-                date,
-                price,
-                actions,
-              } = invoice;
-              return (
-                <tr key={ind} className="*:py-[40px] border-b border-[#E5E7E8]">
-                  <td>
-                    <input type="checkbox" />
-                  </td>
-                  <td>{id}</td>
-                  <td className="text-dark font-semibold">{invoice_subject}</td>
-                  <td>
-                    <div className="flex items-center gap-1">
-                      <img
-                        className="w-[30px] h-[20px] object-cover"
-                        src={flagIcon}
-                        alt="flagIcon"
-                      />
-                      <span>{client.name}</span>
-                    </div>
-                  </td>
-                  <td>{client.vat_no}</td>
-                  <td>{date} </td>
-                  <td>
-                    <button
-                      style={{ backgroundColor: status.color }}
-                      className="size-2 rounded-full mr-1"
-                    ></button>
-                    {status.label}
-                  </td>
-                  <td>{price}</td>
-                  <td>
-                    {actions.download ? (
-                      <div className="flex items-center justify-between">
-                        <button className="bg-[#F0F6FF] rounded-full flex justify-center items-center gap-2 px-6 py-2 text-text-color font-semibold text-sm my-transition hover:bg-text-color hover:text-white">
-                          <FiDownload></FiDownload> Download
-                        </button>
-                        <button className="bg-[#F5F6F7] p-2 rounded-full size-10 flex justify-center items-center my-transition hover:bg-text-color hover:text-white">
-                          <BsThreeDotsVertical className="text-lg"></BsThreeDotsVertical>
-                        </button>
-                      </div>
-                    ) : (
-                      <button className="bg-[#F5F6F7] p-2 rounded-full size-10 flex justify-center items-center my-transition hover:bg-text-color hover:text-white">
-                        <BsThreeDotsVertical className="text-lg"></BsThreeDotsVertical>
-                      </button>
-                    )}
-                  </td>
-                  <td></td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
         {/* tfood */}
         <div className="pt-[40px] pb-[20px] flex justify-between items-center w-full">
           {/* showing result */}
           <p className="text-black text-sm">Showing 1 to 8 of 16 entries</p>
 
           {/* pagination */}
-
           <div className="flex justify-end gap-2">
             {/* previous */}
             <button className="bg-text-color/10 my-transition hover:bg-text-color hover:text-white rounded-full p-[10px] flex justify-center items-center text-text-color size-[40px]">
