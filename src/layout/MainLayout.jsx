@@ -7,14 +7,14 @@ import Footer from "./../shared/footer/Footer";
 function MainLayout() {
   return (
     // main layout
-    <main className="container grid grid-cols-1 lg:grid-cols-12">
+    <main className="container grid grid-cols-1 xl:grid-cols-12">
       {/* navbar aside */}
-      <div className="hidden xl:inline-block lg:col-span-2 min-h-screen bg-primary">
+      <div className="hidden xl:inline-block xl:col-span-2 min-h-screen bg-primary">
         <NavbarAside></NavbarAside>
       </div>
 
       {/* header & footer common and outlet */}
-      <div className="lg:col-span-10">
+      <div className="xl:col-span-10">
         {/* header */}
         <Header></Header>
 

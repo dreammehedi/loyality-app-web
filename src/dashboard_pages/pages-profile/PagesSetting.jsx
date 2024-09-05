@@ -11,9 +11,9 @@ function PagesSetting() {
   return (
     //  pages setting
     <>
-      <section className="lg:ml-8 flex flex-col gap-4 md:gap-6 lg:gap-8">
+      <section className="xl:ml-8 flex flex-col gap-4 md:gap-6 lg:gap-8">
         {/* account setting top */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
           {/* upload photo */}
           <div className="p-4 md:p-6 lg:p-8 space-y-6 flex flex-col justify-start lg:justify-center items-start lg:items-center bg-primary rounded-md">
             {/* user photo */}
@@ -106,7 +106,7 @@ function PagesSetting() {
         </div>
 
         {/* account setting middle */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {/* private info */}
           <div className=" bg-primary rounded-md">
             {/* title */}
@@ -317,9 +317,9 @@ function PagesSetting() {
         </div>
 
         {/* account setting bottom */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-12 gap-4 md:gap-6 lg:gap-8">
           {/* change password */}
-          <div className="lg:col-span-4 bg-primary rounded-md h-fit">
+          <div className="xl:col-span-4 bg-primary rounded-md h-fit">
             {/* title */}
             <p className="px-4 md:px-5 lg:px-6 py-3 text-dark font-medium border-b border-[#959FA3]">
               Change Password
@@ -376,7 +376,7 @@ function PagesSetting() {
           </div>
 
           {/* advanced setting */}
-          <div className="lg:col-span-3 bg-primary rounded-md h-fit">
+          <div className="xl:col-span-3 bg-primary rounded-md h-fit">
             {/* title */}
             <p className="px-4 md:px-5 lg:px-6 py-3 text-dark font-medium border-b border-[#959FA3]">
               Advanced Setting
@@ -461,7 +461,7 @@ function PagesSetting() {
           </div>
 
           {/* pricing plans */}
-          <div className="lg:col-span-5 bg-primary rounded-md space-y-4 h-fit">
+          <div className="lg:col-span-2 xl:col-span-5 bg-primary rounded-md space-y-4 h-fit">
             {/* upgrade plane */}
             <div className="p-4 md:p-5 lg:p-6 space-y-4">
               {/* title */}
