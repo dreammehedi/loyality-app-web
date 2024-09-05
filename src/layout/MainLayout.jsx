@@ -6,14 +6,14 @@ import Footer from "./../shared/footer/Footer";
 function MainLayout() {
   return (
     // main layout
-    <main className="container grid lg:grid-cols-12 ">
+    <main className="container grid lg:grid-cols-12">
       {/* navbar aside */}
-      <div className="lg:col-span-2">
+      <div className="lg:col-span-3">
         <NavbarAside></NavbarAside>
       </div>
 
       {/* header & footer common and outlet */}
-      <div className="lg:col-span-10">
+      <div className="lg:col-span-9">
         {/* header */}
         <Header></Header>
 
