@@ -7,9 +7,9 @@ import Footer from "./../shared/footer/Footer";
 function MainLayout() {
   return (
     // main layout
-    <main className="container grid lg:grid-cols-12">
+    <main className="container grid grid-cols-1 lg:grid-cols-12">
       {/* navbar aside */}
-      <div className="lg:col-span-2 h-screen">
+      <div className="hidden xl:inline-block lg:col-span-2 min-h-screen bg-primary">
         <NavbarAside></NavbarAside>
       </div>
 

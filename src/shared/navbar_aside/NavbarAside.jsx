@@ -32,7 +32,7 @@ function NavbarAside() {
   return (
     // navbar aside menu
     <>
-      <aside className=" bg-primary border-r border-secondary">
+      <aside className="sticky top-0 z-[999] border-r border-secondary">
         {/* logo */}
         <Link to={"/"} className="py-4 inline-block">
           <img

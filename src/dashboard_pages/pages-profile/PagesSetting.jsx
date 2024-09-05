@@ -11,14 +11,14 @@ function PagesSetting() {
   return (
     //  pages setting
     <>
-      <section className="mx-4 md:mx-6 lg:mx-8 flex flex-col gap-4 md:gap-6 lg:gap-8">
+      <section className="lg:ml-8 flex flex-col gap-4 md:gap-6 lg:gap-8">
         {/* account setting top */}
-        <div className="grid grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
           {/* upload photo */}
-          <div className="p-4 md:p-6 lg:p-8 space-y-6 flex flex-col justify-center items-center bg-primary rounded-md">
+          <div className="p-4 md:p-6 lg:p-8 space-y-6 flex flex-col justify-start lg:justify-center items-start lg:items-center bg-primary rounded-md">
             {/* user photo */}
             <img
-              className="size-[150px] object-cover"
+              className="size-[150px] object-cover "
               src="https://i.ibb.co/pxwYHPq/user-photo.png"
               alt=""
             />
@@ -33,10 +33,10 @@ function PagesSetting() {
             </div>
           </div>
           {/* upload banner */}
-          <div className=" space-y-6 flex flex-col justify-center items-center bg-primary rounded-md overflow-hidden">
+          <div className="space-y-6 flex flex-col justify-center items-center bg-primary rounded-md overflow-hidden">
             {/* user photo */}
             <img
-              className="w-full h-[140px] object-cover"
+              className="w-full h-[250px] md:h-[300px] lg:h-[140px] object-cover"
               src="https://i.ibb.co/tP4QVxw/banner-Image.png"
               alt=""
             />
@@ -56,7 +56,7 @@ function PagesSetting() {
             </div>
           </div>
           {/* basic info */}
-          <div className="col-span-2  bg-primary rounded-md">
+          <div className="lg:col-span-2  bg-primary rounded-md">
             {/* title */}
             <p className="px-4 md:px-5 lg:px-6 py-3 text-dark font-medium border-b border-[#959FA3]">
               Basic Info
@@ -106,7 +106,7 @@ function PagesSetting() {
         </div>
 
         {/* account setting middle */}
-        <div className="grid grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {/* private info */}
           <div className=" bg-primary rounded-md">
             {/* title */}
@@ -317,7 +317,7 @@ function PagesSetting() {
         </div>
 
         {/* account setting bottom */}
-        <div className="grid grid-cols-12 gap-4 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 lg:gap-8">
           {/* change password */}
           <div className="lg:col-span-4 bg-primary rounded-md h-fit">
             {/* title */}
@@ -482,7 +482,7 @@ function PagesSetting() {
             </div>
             <hr />
             {/* dactivate account */}
-            <div className="px-4 md:px-5 lg:px-6 py-2 space-y-2">
+            <div className="px-4 md:px-5 lg:px-6 py-2 space-y-2 pb-8">
               <h3 className="text-lg text-dark font-medium ">
                 Deactivate this account
               </h3>
