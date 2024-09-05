@@ -1,17 +1,23 @@
+import PropTypes from "prop-types";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { IoSearch } from "react-icons/io5";
 import { MdOutlineNotificationAdd } from "react-icons/md";
 import { RxDashboard } from "react-icons/rx";
 import { Link } from "react-router-dom";
 
-function Header() {
+function Header({ setNavbarAsideActive }) {
   return (
     // header
     <>
       <header className="bg-primary py-4 px-4 md:px-6 lg:px-8 flex flex-row justify-between items-center gap-4">
         {/* hamberger menu */}
-        <button className="text-xl">
-          <FaBarsStaggered></FaBarsStaggered>
+        <button
+          onClick={() => {
+            setNavbarAsideActive(true);
+          }}
+          className="xl:hidden text-xl my-transition hover:bg-text-color/10 rounded-md p-2"
+        >
+          <FaBarsStaggered />
         </button>
 
         {/* search field */}
@@ -73,5 +79,11 @@ function Header() {
     </>
   );
 }
+
+// prop validation
+
+Header.propTypes = {
+  setNavbarAsideActive: PropTypes.func.isRequired,
+};
 
 export default Header;

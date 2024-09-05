@@ -1,8 +1,11 @@
+import PropTypes from "prop-types";
 import { AiOutlineBars, AiOutlineThunderbolt } from "react-icons/ai";
 import { FaQuestion } from "react-icons/fa";
 import { FiBarChart2, FiUser } from "react-icons/fi";
 import { LuHome } from "react-icons/lu";
+
 import {
+  MdClose,
   MdOutlineCalendarToday,
   MdOutlineContentPaste,
   MdOutlinePayment,
@@ -28,11 +31,21 @@ const invoice = [
   { label: "Invoice", to: "/invoice" },
   { label: "Invoice Detailes", to: "/invoice-detailes" },
 ];
-function NavbarAside() {
+function NavbarAside({ setNavbarAsideActive }) {
   return (
     // navbar aside menu
     <>
       <aside className="sticky top-0 z-[999] border-r border-secondary">
+        {/* navbarAside close button */}
+        <button
+          onClick={() => {
+            setNavbarAsideActive(false);
+          }}
+          className="xl:hidden text-2xl text-text-color absolute right-0 top-4 my-transition hover:bg-text-color/10 rounded-md p-[3px]"
+        >
+          <MdClose />
+        </button>
+
         {/* logo */}
         <Link to={"/"} className="py-4 inline-block">
           <img
@@ -140,5 +153,10 @@ function NavbarAside() {
     </>
   );
 }
+// prop validation
+
+NavbarAside.propTypes = {
+  setNavbarAsideActive: PropTypes.func.isRequired,
+};
 
 export default NavbarAside;

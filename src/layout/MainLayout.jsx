@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../shared/header/Header";
 import NavbarAside from "../shared/navbar_aside/NavbarAside";
@@ -5,18 +6,25 @@ import PagesPagination from "../shared/pages-pagination/PagesPagination";
 import Footer from "./../shared/footer/Footer";
 
 function MainLayout() {
+  // navbar aside active
+  const [navbarAsideActive, setNavbarAsideActive] = useState(false);
+
   return (
     // main layout
     <main className="container grid grid-cols-1 xl:grid-cols-12">
       {/* navbar aside */}
-      <div className="hidden xl:inline-block xl:col-span-2 min-h-screen bg-primary">
-        <NavbarAside></NavbarAside>
+      <div
+        className={`${
+          navbarAsideActive ? "visible left-0 min-w-[300px]" : "-left-full"
+        } absolute z-[9999] top-0 xl:static my-transition xl:inline-block xl:col-span-2 min-h-screen bg-primary`}
+      >
+        <NavbarAside setNavbarAsideActive={setNavbarAsideActive}></NavbarAside>
       </div>
 
       {/* header & footer common and outlet */}
       <div className="xl:col-span-10">
         {/* header */}
-        <Header></Header>
+        <Header setNavbarAsideActive={setNavbarAsideActive}></Header>
 
         {/* pages pagination */}
         <PagesPagination></PagesPagination>
