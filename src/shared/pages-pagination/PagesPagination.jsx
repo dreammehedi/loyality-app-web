@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 function PagesPagination() {
   // location
   const { pathname } = useLocation();
-  const currentPage = pathname.split("/")[1];
+  // const currentPage = pathname?.split("/")[1];
 
   return (
     // pages pagination
@@ -26,7 +26,8 @@ function PagesPagination() {
             <IoIosArrowForward></IoIosArrowForward>
           </li>
           <li className="text-[#191B1C] font-medium capitalize">
-            {pathname === "/" ? "Profile" : { currentPage }}
+            {/* {pathname === "/" ? "Profile" : { pathname }} */}
+            {pathname}
           </li>
         </ul>
       </div>
