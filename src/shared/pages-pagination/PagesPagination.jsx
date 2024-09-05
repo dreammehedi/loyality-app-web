@@ -11,7 +11,7 @@ function PagesPagination() {
     <>
       <div className="px-4 md:px-6 lg:px-8 py-4 md:py-5 lg:py-6 bg-secondary">
         {/* route name */}
-        <span className="text-[#191B1C] font-semibold">Invoice</span>
+        <span className="text-dark font-semibold">Invoice</span>
 
         {/* pagination */}
         <ul className="flex items-center gap-2 text-[#626C70] text-sm">
@@ -25,7 +25,7 @@ function PagesPagination() {
           <li>
             <IoIosArrowForward></IoIosArrowForward>
           </li>
-          <li className="text-[#191B1C] font-medium capitalize">
+          <li className="text-dark font-medium capitalize">
             {/* {pathname === "/" ? "Profile" : { pathname }} */}
             {pathname}
           </li>
