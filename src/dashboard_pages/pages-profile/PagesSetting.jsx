@@ -1,16 +1,44 @@
 import { FaEye } from "react-icons/fa";
+import { IoIosArrowForward } from "react-icons/io";
 import {
   MdOutlineEmail,
   MdOutlineLocationOn,
   MdOutlinePhoneInTalk,
 } from "react-icons/md";
 import { TiShoppingBag } from "react-icons/ti";
+import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 
 function PagesSetting() {
   return (
     //  pages setting
     <>
+      {/* pages pagination */}
+      <div className="px-4 md:px-6 lg:px-8 py-4 md:py-5 lg:py-6 bg-secondary">
+        {/* route name */}
+        <span className="text-dark font-semibold">Invoice</span>
+
+        {/* pagination */}
+        <ul className="flex items-center gap-2 text-[#626C70] text-sm">
+          <li>
+            <Link to={"/"}>Home</Link>
+          </li>
+          <li>
+            <IoIosArrowForward></IoIosArrowForward>
+          </li>
+          <li>Label</li>
+          <li>
+            <IoIosArrowForward></IoIosArrowForward>
+          </li>
+          <li>Profile</li>
+          <li>
+            <IoIosArrowForward></IoIosArrowForward>
+          </li>
+          <li className="text-dark font-medium capitalize">Account Setting</li>
+        </ul>
+      </div>
+
+      {/* section */}
       <section className="xl:ml-8 flex flex-col gap-4 md:gap-6 lg:gap-8">
         {/* account setting top */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8">

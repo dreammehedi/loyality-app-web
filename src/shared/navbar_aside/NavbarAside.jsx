@@ -23,8 +23,8 @@ const managingContent = [
 
 // profile mega menu
 const profile = [
-  { label: "Profile", to: "/" },
-  { label: "Setting", to: "/setting" },
+  { label: "Profile", to: "/profile" },
+  { label: "Setting", to: "/" },
 ];
 // invoice mega menu
 const invoice = [

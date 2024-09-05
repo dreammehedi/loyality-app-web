@@ -1,6 +1,8 @@
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { FiDownload } from "react-icons/fi";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+import { IoIosArrowForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 // invoice data
 const invoicesData = [
@@ -67,6 +69,28 @@ function PagesInvoice() {
   return (
     // pages invoice
     <>
+      {/* pages pagination */}
+      <div className="px-4 md:px-6 lg:px-8 py-4 md:py-5 lg:py-6 bg-secondary">
+        {/* route name */}
+        <span className="text-dark font-semibold">Invoice</span>
+
+        {/* pagination */}
+        <ul className="flex items-center gap-2 text-[#626C70] text-sm">
+          <li>
+            <Link to={"/"}>Home</Link>
+          </li>
+          <li>
+            <IoIosArrowForward></IoIosArrowForward>
+          </li>
+          <li>Pages</li>
+          <li>
+            <IoIosArrowForward></IoIosArrowForward>
+          </li>
+          <li className="text-dark font-medium capitalize">Invoice</li>
+        </ul>
+      </div>
+
+      {/* section */}
       <section className="bg-primary rounded-md xl:ml-8 p-4 md:p-5 lg:p-6">
         {/* pages title */}
         <span className="font-semibold text-dark mb-4 inline-block">
@@ -163,7 +187,7 @@ function PagesInvoice() {
         </div>
 
         {/* tfood */}
-        <div className="pt-[40px] pb-[20px] flex justify-between items-center w-full">
+        <div className="pt-[40px] pb-[20px] flex flex-col md:flex-row justify-center md:justify-between items-center w-full gap-4">
           {/* showing result */}
           <p className="text-black text-sm">Showing 1 to 8 of 16 entries</p>
 

@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-import PagesProfile from "../dashboard_pages/pages-profile/PagesProfile";
 import PagesSetting from "../dashboard_pages/pages-profile/PagesSetting";
 import PagesInvoice from "../dashboard_pages/pages_invoice/PagesInvoice";
 import MainLayout from "../layout/MainLayout";
@@ -13,10 +12,6 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <PagesProfile></PagesProfile>,
-      },
-      {
-        path: "/setting",
         element: <PagesSetting></PagesSetting>,
       },
       {
