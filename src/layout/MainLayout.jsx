@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "../shared/header/Header";
 import NavbarAside from "../shared/navbar_aside/NavbarAside";
+import PagesPagination from "../shared/pages-pagination/PagesPagination";
 import Footer from "./../shared/footer/Footer";
 
 function MainLayout() {
@@ -16,6 +17,9 @@ function MainLayout() {
       <div className="lg:col-span-9">
         {/* header */}
         <Header></Header>
+
+        {/* pages pagination */}
+        <PagesPagination></PagesPagination>
 
         {/* outlet */}
         <Outlet></Outlet>
