@@ -67,7 +67,7 @@ function PagesInvoice() {
   return (
     // pages invoice
     <>
-      <section className="bg-primary rounded-md mx-4 md:mx-6 lg:mx-8 p-4 md:p-5 lg:p-6">
+      <section className="bg-primary rounded-md xl:ml-8 p-4 md:p-5 lg:p-6">
         {/* pages title */}
         <span className="font-semibold text-dark mb-4 inline-block">
           Invoice
