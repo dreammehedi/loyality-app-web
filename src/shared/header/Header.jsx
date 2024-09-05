@@ -2,8 +2,6 @@ import { IoSearch } from "react-icons/io5";
 import { MdOutlineNotificationAdd } from "react-icons/md";
 import { RxDashboard } from "react-icons/rx";
 import { Link } from "react-router-dom";
-import usIcon from "../../assets/us.png";
-import userProfile from "../../assets/user-profile.png";
 
 function Header() {
   return (
@@ -29,7 +27,7 @@ function Header() {
           <div className="relative">
             <img
               className="absolute top-1/2 -translate-y-1/2 left-3 size-[20px] object-cover "
-              src={usIcon}
+              src="https://i.ibb.co/qBsCrZC/us.png"
               alt=""
             />
             <select
@@ -60,7 +58,7 @@ function Header() {
           <div>
             <img
               className="w-full h-full object-cover"
-              src={userProfile}
+              src="https://i.ibb.co/5rRc3wf/user-profile.png"
               alt="user avatar"
             />
           </div>

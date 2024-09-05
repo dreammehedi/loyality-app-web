@@ -1,7 +1,6 @@
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { FiDownload } from "react-icons/fi";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
-import flagIcon from "../../assets/flag.png";
 
 // invoice data
 const invoicesData = [
@@ -11,7 +10,7 @@ const invoicesData = [
     client: {
       name: "Wade Warren",
       vat_no: "87956621",
-      flag_icon: "flagIcon",
+      flag_icon: "https://i.ibb.co/DYH64Br/flag.png",
     },
     date: "15 Dec, 2017",
     status: {
@@ -30,7 +29,7 @@ const invoicesData = [
     client: {
       name: "Darlene Robertson",
       vat_no: "99215743",
-      flag_icon: "flagIcon",
+      flag_icon: "https://i.ibb.co/DYH64Br/flag.png",
     },
     date: "10 Nov, 2018",
     status: {
@@ -49,7 +48,7 @@ const invoicesData = [
     client: {
       name: "Cody Fisher",
       vat_no: "87415422",
-      flag_icon: "flagIcon",
+      flag_icon: "https://i.ibb.co/DYH64Br/flag.png",
     },
     date: "23 Jan, 2020",
     status: {
@@ -120,7 +119,7 @@ function PagesInvoice() {
                             <div className="flex items-center gap-1">
                               <img
                                 className="w-[30px] h-[20px] object-cover"
-                                src={flagIcon}
+                                src={client.flag_icon}
                                 alt="flagIcon"
                               />
                               <span>{client.name}</span>

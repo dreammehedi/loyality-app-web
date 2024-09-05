@@ -5,8 +5,6 @@ import {
   MdOutlinePhoneInTalk,
 } from "react-icons/md";
 import { TiShoppingBag } from "react-icons/ti";
-import bannerImage from "../../assets/banner-image.png";
-import userPhoto from "../../assets/user-photo.png";
 import Button from "../../components/Button";
 
 function PagesSetting() {
@@ -19,7 +17,11 @@ function PagesSetting() {
           {/* upload photo */}
           <div className="p-4 md:p-6 lg:p-8 space-y-6 flex flex-col justify-center items-center bg-primary rounded-md">
             {/* user photo */}
-            <img className="size-[150px] object-cover" src={userPhoto} alt="" />
+            <img
+              className="size-[150px] object-cover"
+              src="https://i.ibb.co/pxwYHPq/user-photo.png"
+              alt=""
+            />
 
             <div className="space-y-6">
               <Button title="Upload Proifle Photo"></Button>
@@ -35,7 +37,7 @@ function PagesSetting() {
             {/* user photo */}
             <img
               className="w-full h-[140px] object-cover"
-              src={bannerImage}
+              src="https://i.ibb.co/tP4QVxw/banner-Image.png"
               alt=""
             />
 

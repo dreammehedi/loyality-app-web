@@ -10,7 +10,6 @@ import {
 import { PiNoteBlank, PiRectangleDuotone } from "react-icons/pi";
 import { TbFileInvoice } from "react-icons/tb";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.png";
 import DropdownMenu from "./DropdownMenu";
 
 // managingContent mega menu
@@ -38,7 +37,7 @@ function NavbarAside() {
         <Link to={"/"} className="py-4 inline-block">
           <img
             className="object-contain h-[32px] w-[115px] rounded-md"
-            src={logo}
+            src="https://i.ibb.co/L6K2ZrC/logo.png"
             alt="Loyality"
           />
         </Link>
