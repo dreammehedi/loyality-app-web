@@ -9,12 +9,12 @@ function MainLayout() {
     // main layout
     <main className="container grid lg:grid-cols-12">
       {/* navbar aside */}
-      <div className="lg:col-span-3 h-screen">
+      <div className="lg:col-span-2 h-screen">
         <NavbarAside></NavbarAside>
       </div>
 
       {/* header & footer common and outlet */}
-      <div className="lg:col-span-9">
+      <div className="lg:col-span-10">
         {/* header */}
         <Header></Header>
 
